@@ -1,0 +1,323 @@
+/* Color Palette */
+:root {
+    --primary-color: #6d123f;
+    --secondary-color: #bba3ae;
+    --accent-color: #b8c646;
+    --highlight-color: #3b7635;
+    --background-color: #e2e2e2;
+    --card-background: #cfb19d;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1.5em;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: var(--highlight-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    width: 85%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    font-size: 0.9em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Cards */
+.post, .admin-post {
+    background: var(--card-background);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post:hover, .admin-post:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.post a, .admin-post a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.post a:hover, .admin-post a:hover {
+    color: var(--highlight-color);
+    transform: scale(1.05);
+}
+
+.post h3, .admin-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.post p, .admin-post p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Buttons */
+button, .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-edit {
+    background-color: var(--accent-color);
+    color: #0b0b0b;
+}
+
+.btn-edit:hover {
+    background-color: var(--highlight-color);
+    transform: scale(1.05);
+}
+
+.btn-delete {
+    background-color: var(--primary-color);
+    color: #0b0b0b;
+}
+
+.btn-delete:hover {
+    background-color: #8a2048;
+    transform: scale(1.05);
+}
+
+.btn-add {
+    background-color: var(--highlight-color);
+    color: #fff;
+}
+
+.btn-add:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Form Styling */
+form {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"], form input[type="number"], form textarea, form select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Admin Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    border: 1px solid var(--secondary-color);
+    text-align: left;
+    color: var(--primary-color);
+    font-size: 1em;
+}
+
+table th {
+    background-color: var(--accent-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+.admin-actions a {
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.admin-actions .btn-edit {
+    background-color: var(--accent-color);
+}
+
+.admin-actions .btn-edit:hover {
+    background-color: var(--highlight-color);
+    transform: scale(1.1);
+}
+
+.admin-actions .btn-delete {
+    background-color: var(--primary-color);
+}
+
+.admin-actions .btn-delete:hover {
+    background-color: #8a2048;
+    transform: scale(1.1);
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Comments Section */
+.comments {
+    margin-top: 40px;
+    background-color: #f4f4f9;
+    padding: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+}
+
+.comments h3, .comments h4 {
+    color: #6d123f; /* Darker shade for headers */
+    margin-bottom: 15px;
+}
+
+.comment {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #cfb19d;
+    border-radius: 5px;
+    background-color: #bba3ae; /* Light background for comments */
+    transition: background-color 0.3s ease;
+}
+
+.comment:hover {
+    background-color: #cfb19d; /* Slightly darker on hover */
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+.comment p strong {
+    color: #3b7635; /* Author name in a distinct color */
+}
+
+.comment p time {
+    font-size: 0.85em;
+    color: #6d123f;
+}
+
+.comments form {
+    margin-top: 20px;
+}
+
+.comments form input[type="text"],
+.comments form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    background-color: #f4f4f9;
+}
+
+.comments form button {
+    background-color: #6d123f;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comments form button:hover {
+    background-color: #b8c646; /* Brighter color for hover */
+}
